@@ -1,0 +1,139 @@
+---
+title: Xeyla Changelog
+description: Review the version history of Xeyla, including recent updates, new features, and improvements.
+---
+
+## Latest Updates
+
+Stay informed about Xeyla's evolution. You receive automatic notifications for major releases through your dashboard at `https://dashboard.example.com`. Review changes below to understand new capabilities and required actions.
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#v120">
+    Enhanced search and real-time collaboration.
+  </Card>
+  <Card title="v1.1.0" icon="settings" href="#v110">
+    Improved page organization and export options.
+  </Card>
+  <Card title="v1.0.0" icon="rocket" href="#v100">
+    Initial stable release with core documentation tools.
+  </Card>
+</Columns>
+
+## Release History
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration: Multiple users edit pages simultaneously with live cursors and conflict resolution.
+- Advanced search: Full-text search across all projects with filters for tags, dates, and content types.
+
+## Improvements
+
+- Faster page rendering by `>40%` using optimized caching.
+- Enhanced mobile support with responsive editor layouts.
+
+## Bug Fixes
+
+- Fixed markdown rendering issues with nested lists.
+- Resolved export failures for large documents.
+
+To upgrade, run the following:
+
+<CodeGroup tabs="npm,yarn">
+  ```bash
+  npm update xeyla@latest
+  ```
+  ```bash
+  yarn upgrade xeyla@latest
+  ```
+</CodeGroup>
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Custom themes: Apply brand colors like `#3B82F6` to your documentation spaces.
+- Page templates: Pre-built starters for API docs, changelogs, and FAQs.
+
+## Bug Fixes
+
+- Corrected authentication token refresh logic for long sessions.
+- Patched sidebar navigation glitches on Safari.
+
+## API Changes
+
+Updated endpoint at `https://api.example.com/v1/docs` to include `templateId` parameter:
+
+<ParamField path="templateId" param-type="string" required="false">
+  ID of the template to apply.
+</ParamField>
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core documentation editor with markdown, MDX, and visual blocks support.
+- Project organization: Create unlimited spaces with role-based access.
+
+## Breaking Changes
+
+- Migrated from `legacyToken` to `apiKey` for authentication.
+
+<Callout kind="danger">
+  Update your integrations to use `apiKey: YOUR_API_KEY`.
+</Callout>
+
+## Initial Setup
+
+```bash
+npm install xeyla
+xeyla init --api-key YOUR_API_KEY
+```
+
+</Update>
+
+## Upcoming Changes
+
+Preview what's next in v1.3.0. Provide feedback via `https://github.com/xeyla/docs`.
+
+<Expandable title="v1.3.0 Preview" default-open="true">
+
+### Planned Features
+
+- AI-assisted content generation.
+- Webhook support for custom integrations.
+
+### Example Webhook Payload
+
+```json
+{
+  "event": "page.updated",
+  "data": {
+    "pageId": "doc_123",
+    "spaceId": "space_456"
+  }
+}
+```
+
+</Expandable>
+
+<Callout kind="tip">
+  Enable beta features in your dashboard settings at `https://dashboard.example.com/settings/beta`.
+</Callout>
+
+<Steps>
+  <Step title="Check for Updates" icon="refresh-cw">
+    Visit your dashboard and select "Updates".
+  </Step>
+  <Step title="Review Changes" icon="book-open">
+    Read release notes here before upgrading.
+  </Step>
+  <Step title="Upgrade" icon="upload">
+    Follow the code examples above.
+  </Step>
+</Steps>
