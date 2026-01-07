@@ -57,13 +57,7 @@
       },
       {
         "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "openapi": "openapi.yaml"
-          }
-        ]
+        "icon": "code"
       },
       {
         "tab": "Help Center",
